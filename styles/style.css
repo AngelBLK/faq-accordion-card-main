@@ -1,1 +1,40 @@
 @import url('./globals.css');
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+.img {
+  width: 420px;
+  margin-left: -110px;
+}
+
+.box {
+  border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
