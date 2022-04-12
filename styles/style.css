@@ -1,40 +1,73 @@
-@import url('./globals.css');
+@import url("./globals.css");
 
 body {
   display: grid;
   place-items: center;
 }
 
-.img {
-  width: 420px;
-  margin-left: -110px;
+main {
+  width: 100%;
 }
 
 .box {
+  max-width: 800px;
   border-radius: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.attribution { 
-  font-size: 11px; 
-  text-align: center; 
+.image-option {
+  width: 400px;
+  height: 300px;
+  background-image: url(../images/illustration-woman-online-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  left: -100px;
 }
-.attribution a { 
-  color: hsl(228, 45%, 44%); 
+
+.accordion-text {
+  margin: 0;
+  transition: height 0.35s ease-in-out;
+  overflow: hidden;
+}
+
+.accordion-text:not(.active) {
+  display: none;
+}
+
+
+.active {
+  display: block;
+}  
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--dividers-light-grayish-blue);
+}
+.attribution a {
+  color: var(--neutral-text-very-dark-grayish-blue);
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    display: grid;
+    place-items: center;
+    margin: 50px 0;
+  }
+
+  .image-option {
+    width: 250px;
+    height: 200px;
+    background-image: url(../images/illustration-woman-online-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -125px;
+  }
+
+  .accordion-margin {
+    margin: 50px 0 0 0;
+  }
 }

@@ -24,4 +24,5 @@ body {
   background: rgb(174,103,233);
   background: linear-gradient(180deg, rgba(174,103,233,1) 0%, rgba(100,100,230,1) 35%);
   background-repeat: no-repeat;
+  background-size: contain;
 }
