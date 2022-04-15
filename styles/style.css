@@ -34,10 +34,17 @@ main {
   display: none;
 }
 
-
 .active {
   display: block;
-}  
+}
+.btn-active {
+  font-weight: 700;
+}
+
+.img-rotate {
+  transform: rotate(180deg);
+  transition: transform .8s;
+}
 
 .attribution {
   font-size: 11px;
