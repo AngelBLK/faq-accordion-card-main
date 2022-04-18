@@ -12,7 +12,10 @@ main {
 .box {
   max-width: 800px;
   border-radius: 20px;
+  overflow: visible;
+  z-index: -1;
 }
+
 
 .image-option {
   width: 400px;
@@ -21,7 +24,20 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
-  left: -100px;
+  left: -70px;
+}
+
+.image-box {
+  width: 150px;
+  height: 150px;
+  background-image: url(../images/illustration-box-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 120px;
+  left: -75px;
+  z-index: 20;
+  animation: float 4s ease-in-out infinite;
 }
 
 .accordion-text {
@@ -39,6 +55,7 @@ main {
 }
 .btn-active {
   font-weight: 700;
+  transition: all .8s;
 }
 
 .img-rotate {
@@ -55,11 +72,27 @@ main {
   color: var(--neutral-text-very-dark-grayish-blue);
 }
 
+@keyframes float {
+	0% {	
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
 @media screen and (max-width: 700px) {
   main {
     display: grid;
     place-items: center;
     margin: 50px 0;
+  }
+
+  .title-center {
+    text-align: center;
   }
 
   .image-option {
@@ -69,9 +102,13 @@ main {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: -10px;
+    top: -160px;
     left: 50%;
     margin-left: -125px;
+  }
+
+  .image-box {
+    display: none;
   }
 
   .accordion-margin {
