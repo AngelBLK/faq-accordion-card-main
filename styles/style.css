@@ -85,11 +85,6 @@ main {
 }
 
 @media screen and (max-width: 700px) {
-  main {
-    display: grid;
-    place-items: center;
-    margin: 50px 0;
-  }
 
   .title-center {
     text-align: center;
